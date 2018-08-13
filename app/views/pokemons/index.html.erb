@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <h1>All Pokemons</h1>
+  <hr>
+  <ul>
+  <% @pokemons.each do |pokemon| %>
+    <li><%= link_to pokemon.name, pokemon_path(pokemon) %></li>
+  <% end %>
+  </ul>
+  <%= link_to('Log a New Pokemon!!!!', new_pokemon_path) %>
+</div>

@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <h1>Pokemon Info:</h1>
+  <hr>
+  <p>Name: <%= @pokemon.name %></p>
+  <p>Element Type: <%= @pokemon.element_type %></p>
+  <p>Weight: <%= @pokemon.weight %></p>
+
+  <%= link_to 'Edit Pokemon Info', edit_pokemon_path(@pokemon) %>
+  <hr>
+  <%= link_to('Delete this Pokemon', pokemon_path(@pokemon), method: :delete, class: 'text-danger') %>
+</div>
