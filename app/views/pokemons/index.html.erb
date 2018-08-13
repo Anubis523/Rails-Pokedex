@@ -1,0 +1,8 @@
+<h3>This is a list of all the Pokemons:</h3>
+<ul>
+<% @pokemons.each do |poke| %>
+  <li><label>Name:</label><%= link_to poke.name, pokemon_path(poke) %></li>
+<% end %>
+
+</ul>
+<%= link_to "Create New Pokemon", new_pokemon_path %>

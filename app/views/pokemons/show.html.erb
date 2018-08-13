@@ -1,0 +1,14 @@
+<h3>Pokemon:</h3>
+<label>Name:</label>
+<%= @pokemon.name %>
+<br/>
+<label>Pokemon type:</label>
+<%= @pokemon.pokemon_type %>
+<br/>
+<label>Weight:</label>
+<%= @pokemon.weight %>
+<br/>
+
+<%= link_to "Show All Pokemon", pokemons_path %>
+<br/>
+<%= link_to "Edit Pokemon", edit_pokemon_path(@pokemon) %>
