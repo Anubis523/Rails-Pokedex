@@ -18,7 +18,7 @@ class PokemonsController < ApplicationController
     @pokemon = Pokemon.new(pokemon_params)
 
     if @pokemon.save
-      redirect_to "/pokemons/#{@pokemon.id}"
+      redirect_to pokemon_path(@pokemon)
     end
   end
 
@@ -39,6 +39,10 @@ class PokemonsController < ApplicationController
   def destroy
     @pokemon = Pokemon.find(params[:id])
     @pokemon.destroy
+
+    # you don't have to redirect if you don't want to. 
+    # you can render in any of these controller actions
+    # render :spaghetti
     redirect_to pokemons_path # '/pokemons'
   end
 
